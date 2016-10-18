@@ -1,0 +1,53 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+        meta(name="description" content=description)
+        meta(name="keywords" content="blog, diary, study, node.js, mongodb, bootstrap")
+        meta(property="og:title" content=title)
+        meta(property="og:type" content="website")
+        meta(property="og:url" content="http://" + url)
+        meta(property="og:image" content="http://" + url + "/static/img/thumb.png")
+        meta(property="og:description" content=description)
+        title #{title}
+        // bootstrap
+        // link(rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css")
+        link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css")
+        link(rel="stylesheet" href="static/css/style.css")
+        script(src="static/js/jquery/jquery.min.js")
+        script(src="static/js/bootstrap/bootstrap.min.js")
+        script(src="static/js/ui.js")
+    body
+        nav.navbar.navbar-default
+            div.container-fluid
+                div.navbar-header
+                    a.navbar-brand(href="/")
+                        img(alt="moonlog logo" src="static/img/logo.png" width="20" height="20")
+                div.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href="/") moonlog
+                                span.sr-only (current)
+                        li.dropdown
+                            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+                                | Category
+                                span.caret
+                            ul.dropdown-menu
+                                li
+                                    a(href="#") Sample
+                                li
+                                    a(href="#") Sample
+                                li.divider(role="separator")
+                                li
+                                    a(href="#") Sample
+                                li
+                                    a(href="#") Sample
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href="/login/") login
+                        li
+                            a(href="/signup/") signup
+        div.container
+            block content

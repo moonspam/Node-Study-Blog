@@ -1,0 +1,48 @@
+{
+  "name": "moonlog",
+  "description": "let me introduce myself",
+  "main": "web.js",
+  "authors": [
+    "moonspam"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "blog",
+    "diary",
+    "node.js",
+    "mongodb",
+    "bootstrap"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "install": {
+    "path": {
+      "css": "public/css",
+      "map": "public/css",
+      "js": "public/js",
+      "eot": "public/fonts",
+      "svg": "public/fonts",
+      "ttf": "public/fonts",
+      "woff": "public/fonts",
+      "woff2": "public/fonts"
+    },
+    "sources": {
+      "jquery": "bower_components/jquery/dist/jquery.min.js",
+      "bootstrap": [
+        "bower_components/bootstrap/dist/css/bootstrap.min.css",
+        "bower_components/bootstrap/dist/css/bootstrap.min.css.map",
+        "bower_components/bootstrap/dist/js/bootstrap.min.js",
+        "bower_components/bootstrap/dist/fonts/**"
+      ]
+    }
+  }
+}
