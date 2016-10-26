@@ -13,19 +13,22 @@ html(lang="ko")
         meta(property="og:description" content=description)
         title #{title}
         // bootstrap
-        // link(rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css")
-        link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css")
+        link(rel="stylesheet" href="static/css/bootstrap/bootstrap.min.css")
         link(rel="stylesheet" href="static/css/style.css")
         script(src="static/js/jquery/jquery.min.js")
         script(src="static/js/bootstrap/bootstrap.min.js")
         script(src="static/js/ui.js")
     body
-        nav.navbar.navbar-default
+        nav.navbar.navbar-default(style="margin-bottom:0")
             div.container-fluid
                 div.navbar-header
+                    button.navbar-toggle(type="button" data-toggle="collapse" data-target="#myNavbar")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
                     a.navbar-brand(href="/")
                         img(alt="moonlog logo" src="static/img/logo.png" width="20" height="20")
-                div.collapse.navbar-collapse
+                div.collapse.navbar-collapse#myNavbar
                     ul.nav.navbar-nav
                         li.active
                             a(href="/") moonlog
@@ -46,12 +49,32 @@ html(lang="ko")
                                     a(href="#") Sample
                     ul.nav.navbar-nav.navbar-right
                         li
-                            a(href="/login/") login
+                            a(href="/login/")
+                                span.glyphicon.glyphicon-log-in  Login
                         li
-                            a(href="/signup/") signup
+                            a(href="/signup/")
+                                span.glyphicon.glyphicon-user  Signup
+        div.jumbotron(style="background:url(//drscdn.500px.org/photo/134088563/m%3D900/c03e7487a54ced804a5be0fb8613ce0f) no-repeat center center;background-size:cover;color:#FFFFFF")
+            div.container
+                h1 {moonlog}
+                p Node.js Study very hard!
+                a(href="https://500px.com/photo/134088563/abisko-autumn-by-calle-artmark" alt="Abisko Autumn: 500px.com의 Calle Artmark")
         div.container
-            h1 {moonlog}
             div.row
-                block content
-                div.col-md-4
-                    p widget
+                div.col-md-8
+                    div.alert.alert-danger(role="alert") Connecting Error
+                    block content
+                div.col-md-2
+                    h5 archive
+                    ul
+                        li
+                            a(href="#") 2016년 8월
+                        li
+                            a(href="#") 2016년 7월
+                        li
+                            a(href="#") 2016년 6월
+                        li
+                            a(href="#") 2016년 5월
+                        li
+                            a(href="#") 2016년 4월
+                    small &copy; 2016 moonlog
