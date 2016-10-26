@@ -54,14 +54,16 @@ html(lang="ko")
                         li
                             a(href="/signup/")
                                 span.glyphicon.glyphicon-user  Signup
-        div.jumbotron(style="background:url(//drscdn.500px.org/photo/134088563/m%3D900/c03e7487a54ced804a5be0fb8613ce0f) no-repeat center center;background-size:cover;color:#FFFFFF")
+        div.head.jumbotron(style="background:url(//drscdn.500px.org/photo/134088563/m%3D900/c03e7487a54ced804a5be0fb8613ce0f) no-repeat center center;background-size:cover;color:#FFFFFF")
             div.container
                 h1 {moonlog}
-                p Node.js Study very hard!
-                a(href="https://500px.com/photo/134088563/abisko-autumn-by-calle-artmark" alt="Abisko Autumn: 500px.com의 Calle Artmark")
+                p.lead Node.js Study very hard!
+                div.head_imgcaption
+                    small
+                        a(href="https://500px.com/photo/134088563/abisko-autumn-by-calle-artmark") Abisko Autumn: 500px.com의 Calle Artmark
         div.container
             div.row
-                div.col-md-8
+                div.col-md-10
                     div.alert.alert-danger(role="alert") Connecting Error
                     block content
                 div.col-md-2

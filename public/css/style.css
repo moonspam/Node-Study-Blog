@@ -1,0 +1,3 @@
+.head {position: relative}
+.head_imgcaption {position: absolute; right: 0; bottom: 0; padding: 0 2px; opacity: .5}
+.head_imgcaption a {color: #fff}
