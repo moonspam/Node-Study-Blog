@@ -3,10 +3,23 @@ var path = require("path");
 var express = require("express");
 var favicon = require("serve-favicon");
 var morgan = require("morgan");
-
-var app = express();
+var bodyParser = require("body-parser");
+var session = require("express-session");
+var mongoose = require("mongoose");
+var passport = require("passport");
+var socketio = require("socket.io");
 
 var homeRouter = require("./routes/home");
+
+mongoose.connect("mongodb://localhost/blog")
+var db = mongoose.connection;
+
+db.once("open", function() {
+    console.log("DB is connected");
+});
+
+
+var app = express();
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
